@@ -10,7 +10,7 @@ Each deliverable's summary and results are listed below.
 ## Linear Regression to Predict MPG
 Using both the summary() and lm() functions, we designed a linear model  that predicts the mpg the prototypes.  For this, we passed using all 6 variables from the mecha_mpg_df using mgp as the dependant variable.  
 
-insert image
+![d1output](https://user-images.githubusercontent.com/94569240/161388877-d0985b55-30c0-4e50-82d6-dce778285536.PNG)
 
 ##### Summary Highlights
 1. **Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?**
@@ -25,11 +25,11 @@ Yes.  Based on our r-squared value of 0.7149, we can approximate that 71% of pre
 ## Summary Statistics on Suspension Coils
 To determine if the manufacturing process of suspension coils is consistent across all three lots, we created two summary statistics DataFrames using the funtions summary() group_by(), mean(), median(), var() and sd(). The first outlined the suspension coil’s PSI continuous variable across all manufacturing lots- 
 
-insert image
+![total_summary_df](https://user-images.githubusercontent.com/94569240/161388915-28d33478-804b-4146-89ec-9a0a92fc9f56.PNG)
 
 -while the second broke these metrics out for each individual lot. 
 
-insert image
+![lot_summary_df](https://user-images.githubusercontent.com/94569240/161388918-11d26818-9337-4ca2-849f-5c66f362a7d3.PNG)
 
 ##### Summary Highlights 
 1. **The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?**
@@ -40,13 +40,13 @@ Using one-sample t-tests, we tested to see if the manufacturing lots collectivel
 
 Looking at the three lots all together, out t-test tells us that they *are* statistically similar to the established population mean, 1500 PSI.  
 
-insert image
+![allPSI_ttest](https://user-images.githubusercontent.com/94569240/161388924-14b90276-8bb6-450f-9f06-bfcbdc611e9c.PNG)
 
 We know this based on the p-value created by the t-test calculating out to about 0.06.  This is larger than our assumed significance level of 0.05, thus, we do not have enough evidence to reject the null hypothesis, which makes them statistically similar.  
 
 Looking at each lot individually, we find that lots 1 & 2 have the saem outcome.  With p-values of 1 and 0.06 respectively, we do not have enough evidence to reject the null hypothesis, making them statistically similar with the established population mean, 1500 PSI.  However, based on the image below, that is not teh case for lot 3.  
 
-insert image 
+![eachlot_ttest](https://user-images.githubusercontent.com/94569240/161388927-70749d12-4c2e-462e-815d-0b57267d1de2.PNG)
 
 When we run the t-test for lot three individually, we get a p-value of 0.04, which is less than our assumed significance level of 0.05.  We also find the true mean of x to be 1496.14  which varies from its sister lots.  This tells us to reject the null hypothesis and that lot 3 is statistically different.  
 
